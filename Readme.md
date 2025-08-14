@@ -120,3 +120,9 @@ While the primary configuration is through the environment variable, you can mod
 - `PORT`: Change the port to manage access for other services (e.g., `3389` for RDP).
 - `PROTOCOL`: Change the protocol (e.g., `udp`).
 - `IP_CHECK_SERVICE`: Change the service used to detect the public IP if needed.
+
+## Notice of AI Generation and Disclaimer
+
+This project's documentation, including the `Readme.md` file, was generated with the assistance of **Google's Gemini**.
+
+While the underlying code has been reviewed by a human, this material is provided on an "as is" basis, without warranties or guarantees of any kind, either express or implied. You are solely responsible for thoroughly testing and validating the code to ensure it is safe and suitable for your specific environment and requirements before implementation.
