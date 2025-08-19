@@ -5,9 +5,9 @@ import sys
 import os
 
 # --- Configuration ---
-# The Security Group ID is now read from the 'security-group' environment variable.
+# The Security Group ID is now read from the 'securitygroup' environment variable.
 # Example of setting it in your shell before running:
-# export security-group='sg-0123456789abcdef0'
+# export securitygroup='sg-0123456789abcdef0'
 PORT = 22
 PROTOCOL = 'tcp'
 IP_CHECK_SERVICE = 'http://checkip.amazonaws.com'
@@ -35,10 +35,10 @@ def manage_security_group_rule():
     - If not, it removes any old SSH rules and adds a new one for the current IP.
     """
     # Get Security Group ID from environment variable
-    security_group_id = os.getenv('security-group')
+    security_group_id = os.getenv('securityGroup')
     if not security_group_id:
         print("ERROR: The 'security-group' environment variable is not set.", file=sys.stderr)
-        print("INFO: Please set it before running the script. Example: export security-group='sg-xxxxxxxx'", file=sys.stderr)
+        print("INFO: Please set it before running the script. Example: export securityGroup='sg-xxxxxxxx'", file=sys.stderr)
         sys.exit(1)
 
     current_ip = get_public_ip()
